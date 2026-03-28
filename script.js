@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
             theadHTML += `
                 <th class="${isToday ? 'today-col' : ''}">
                     <div style="display:flex; flex-direction:column; align-items:center; opacity: ${isToday ? '1' : '0.6'};">
-                        <span style="font-size:0.65rem;">${shortDay}</span>
-                        <span style="font-size:0.9rem; ${isToday ? 'color: var(--accent-primary); font-weight:700;' : ''}">${d}</span>
+                        <span style="font-size:0.55rem;">${shortDay}</span>
+                        <span style="font-size:0.75rem; letter-spacing: -0.5px; ${isToday ? 'color: var(--accent-primary); font-weight:700;' : ''}">${d}</span>
                     </div>
                 </th>
             `;
@@ -278,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overallChartInstance.destroy();
         }
 
-        // Set a fixed premium height for the line chart
+        // Revert to original beautiful height per user request
         container.style.height = `280px`;
 
         const gradient = ctx.createLinearGradient(0, 0, 0, 280);
